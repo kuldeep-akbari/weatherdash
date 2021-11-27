@@ -1,0 +1,23 @@
+.App {
+    text-align: center;
+  }
+  
+  .nav-brand {
+    font-size: x-large;
+    font-weight: bolder;
+    color: black !important;
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+  
+  .nav-item {
+    font-size: large;
+    font-weight: bolder;
+    color: black !important;
+  }
+
+  .navbar{
+      background-color: #A9D5FF !important;
+  }
