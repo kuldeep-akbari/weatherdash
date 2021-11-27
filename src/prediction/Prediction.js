@@ -1,8 +1,8 @@
-import './Prediction.css';
+import "./Prediction.css";
 
 function Prediction() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <h1>Prediction</h1>
       </header>

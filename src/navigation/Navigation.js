@@ -1,24 +1,35 @@
 import "./Navigation.css";
-import { Navbar, Container, Nav, } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Brand from "../brand/Brand";
 // import 'bootstrap/dist/css/bootstrap.css';
 
 function Navigation() {
   return (
-    <div className="App">
+    <div>
       <Navbar className="navbar" expand="lg">
         <Container>
-          <Navbar.Brand className="nav-brand" as={Link} to="/">
-            WeatherDash
+          <Navbar.Brand as={Link} to="/">
+            <Brand />
           </Navbar.Brand>
+          <Navbar.Toggle className="navbar-dark" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="justify-content-end main-nav">
-              <Nav.Link className="nav-item" as={Link} to="/Prediction">
+              <NavLink
+                to="/Prediction"
+                activeClassName="selected"
+                className="nav-item nav-link"
+              >
                 Prediction
-              </Nav.Link>
-              <Nav.Link className="nav-item" as={Link} to="/AboutUs">
+              </NavLink>
+              <NavLink
+                to="/AboutUs"
+                activeClassName="selected"
+                className="nav-item nav-link"
+              >
                 AboutUs
-              </Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,0 +1,15 @@
+.nav-brand {
+  font-size: x-large;
+  font-weight: 600;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  font-family: "Capriola", sans-serif;
+}
+
+.nav-brand-img {
+  max-height: 2em;
+  max-width: 2em;
+  margin-right: 0.2em;
+  vertical-align: middle;
+}

@@ -1,8 +1,8 @@
-import './AboutUs.css';
+import "./AboutUs.css";
 
 function AboutUs() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <h1>AboutUs</h1>
       </header>
