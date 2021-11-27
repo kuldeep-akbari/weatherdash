@@ -1,14 +1,13 @@
+import './Dashboard.css';
 
-import './App.css';
-
-function App() {
+function Dashboard() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello world</h1>
+        <h1>Dashboard</h1>
       </header>
     </div>
   );
 }
 
-export default App;
+export default Dashboard;
