@@ -1,12 +1,13 @@
 import "./Dashboard.css";
+import "../index.css"
 
 function Dashboard() {
   return (
-    <div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-2 blue">Column Large 2</div>
-            <div class="col-lg-10 black">Column Large 10</div>
+    <div >
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3 sidebar">Column Large 3</div>
+            <div className="col-md-9 main">Column Large 9</div>
           </div>
         </div>
     </div>
@@ -14,3 +15,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+ 
