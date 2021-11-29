@@ -18,14 +18,14 @@ function Navigation() {
             <Nav className="justify-content-end main-nav">
               <NavLink
                 to="/Prediction"
-                activeClassName="selected"
+                active ="selected"
                 className="nav-item nav-link"
               >
                 Prediction
               </NavLink>
               <NavLink
                 to="/AboutUs"
-                activeClassName="selected"
+                active ="selected"
                 className="nav-item nav-link"
               >
                 AboutUs
