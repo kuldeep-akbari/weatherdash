@@ -1,6 +1,9 @@
 import "./Prediction.css";
 
-function Prediction() {
+function Prediction({data}) {
+
+console.log("latitude is  " + data.latitude);
+
   return (
     <div>
       <header className="App-header">

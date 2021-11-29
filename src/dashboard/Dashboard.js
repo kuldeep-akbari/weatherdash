@@ -1,13 +1,19 @@
 import "./Dashboard.css";
 import "../index.css"
+import Sidebar from "./sidebar/Sidebar";
 
-function Dashboard() {
+function Dashboard({data}) {
+
+  console.log("longitude is  " + data.longitude);
+
   return (
     <div >
         <div className="container">
           <div className="row">
-            <div className="col-md-3 sidebar">Column Large 3</div>
-            <div className="col-md-9 main">Column Large 9</div>
+            <div className="col-md-3 sidebar">
+              <Sidebar/>
+            </div>
+            <div className="col-md-9 main"></div>
           </div>
         </div>
     </div>

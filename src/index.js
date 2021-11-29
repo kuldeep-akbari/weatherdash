@@ -11,25 +11,22 @@ import axios from "axios";
 var latitude = "45.52345";
 var longitude = "-122.67621";
 
-function abcd() {
-
+function createApp() {
   var url =
-    'https://api.open-meteo.com/v1/forecast?latitude='
-    + latitude 
-    + '&longitude='
-    + longitude 
-    + '&hourly=temperature_2m,relativehumidity_2m,precipitation,cloudcover,windspeed_10m,soil_temperature_0cm&daily=weathercode,temperature_2m_max,temperature_2m_min&windspeed_unit=mph&timezone=America%2FLos_Angeles';
+    "https://api.open-meteo.com/v1/forecast?latitude=" +
+    latitude +
+    "&longitude=" +
+    longitude +
+    "&hourly=temperature_2m,relativehumidity_2m,precipitation,cloudcover,windspeed_10m,soil_temperature_0cm&daily=weathercode,temperature_2m_max,temperature_2m_min&windspeed_unit=mph&timezone=America%2FLos_Angeles";
 
   axios.get(url).then((res) => {
-    console.log(res.data);
-
     ReactDOM.render(
       <React.StrictMode>
         <BrowserRouter>
           <Navigation />
           <Routes>
-            <Route exact path="/" element={<Dashboard />} />
-            <Route path="/Prediction" element={<Prediction />} />
+            <Route exact path="/" element={<Dashboard data={res.data} />} />
+            <Route path="/Prediction" element={<Prediction data={res.data} />} />
             <Route path="/AboutUs" element={<AboutUs />} />
           </Routes>
         </BrowserRouter>
@@ -39,4 +36,4 @@ function abcd() {
   });
 }
 
-abcd();
+createApp();
