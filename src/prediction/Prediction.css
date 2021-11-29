@@ -1,0 +1,17 @@
+.card{
+    justify-content: center;
+}
+
+.prediction-title{
+    font-size: x-large;
+    margin: 0.50em;
+    padding: 0.25em;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   }

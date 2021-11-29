@@ -12,11 +12,11 @@ function AboutUs() {
       <header className="App-header">
         <h1>About Us</h1>
       </header>
-      <div className="row">
+      <div className="row custom-row">
         <div className="col-md-6 col-lg-6  col-sm-12">
           <div className ="card shadow-sm p-3" style={{width:`20em`}} >
             <div className="card-image">
-            <img src={img1} id="image1" class="img-fluid shadow-2-strong rounded" alt="j profilepicture" />
+            <img src={img1} id="image1" className="img-fluid shadow-2-strong rounded" alt="j profilepicture" />
             </div>
             <div className="cardbody">
               <h4>Kuldeep Akbari</h4>
@@ -24,8 +24,8 @@ function AboutUs() {
               <p className="info">Specialize in .....</p>
             </div>
             <div className="footer">
-            <a className="icon"   href="https://en.wikipedia.org/wiki/Donald_Trump" class="card-link">
-              <img src={lilogo} id="imageli1" class="img-fluidrounded" alt="logo" /> 
+            <a className="icon"   href="https://en.wikipedia.org/wiki/Donald_Trump" className="card-link">
+              <img src={lilogo} id="imageli1" className="img-fluidrounded" alt="logo" /> 
             </a>
 
             </div>
@@ -35,7 +35,7 @@ function AboutUs() {
         <div className="col-md-6 col-lg-6  col-sm-12">
           <div className ="card shadow-sm p-3" style={{width:`20em`}} >
             <div className="card-image">
-            <img src={img2} id="image2" class="img-fluid shadow-2-strong rounded" alt="j profilepicture" />
+            <img src={img2} id="image2" className="img-fluid shadow-2-strong rounded" alt="j profilepicture" />
             </div>
             <div className="cardbody">
               <h4>Shraddha Revar</h4>
@@ -43,8 +43,8 @@ function AboutUs() {
               <p className="info">Specialize in .....</p>
             </div>
             <div className="footer">
-            <a href="https://en.wikipedia.org/wiki/Bill_Clinton" class="card-link">
-              <img src={lilogo} id="imageli2" class="img-fluid rounded" alt="logo" /> 
+            <a href="https://en.wikipedia.org/wiki/Bill_Clinton" className="card-link">
+              <img src={lilogo} id="imageli2" className="img-fluid rounded" alt="logo" /> 
             </a>
             </div>
           </div>

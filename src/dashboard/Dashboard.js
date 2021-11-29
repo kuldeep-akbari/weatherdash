@@ -11,9 +11,10 @@ function Dashboard({data}) {
         <div className="container">
           <div className="row">
             <div className="col-md-3 sidebar">
+              abcd
               <Sidebar/>
             </div>
-            <div className="col-md-9 main"></div>
+            <div className="col-md-9 main">efgh</div>
           </div>
         </div>
     </div>
