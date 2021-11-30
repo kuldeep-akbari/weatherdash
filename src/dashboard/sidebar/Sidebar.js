@@ -1,13 +1,25 @@
 import React from "react";
-import "./Sidebar.css"
+import "./Sidebar.css";
+import { useState } from "react";
+import Select from "react-select";
+import { Cities } from "./cities";
 
-function Sidebar() {
+function Sidebar(props) {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleChange = (e) => {
+    setSelectedOption(e);
+    // props.changCity(e.latitude, e.longitude, e.value);
+    console.log("sidebar : " + e.latitude + " " + e.longitude + " " + e.value);
+  };
+
   return (
     <div>
-      <input
-        className="form-control rounded fontAwesome"
-        type="text"
-        placeholder="&#xF002; Search city"
+      <Select
+        placeholder="Select Option"
+        value={selectedOption}
+        options={Cities}
+        onChange={handleChange}
       />
     </div>
   );

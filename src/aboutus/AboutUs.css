@@ -1,34 +1,17 @@
-h1{
+.card {
+  justify-content: center;
+}
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-title {
+    font-size: x-large;
+    margin: 0.5em;
+    padding: 0.25em;
     text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.cardimage{
-    margin-top: 300px;
-    
-}
-#image1, #image2{
-
-    height: 300px;
-    width: 300px;
-}
-#imageli1, #imageli2{
-    height: 25px;
-    width: 25px;
-    margin: 5px;
-}
-
-.custom-row{
-    padding-top: 20px;
-    text-align: center;
-    padding-left: 250px;
-}
-h4{
-    padding-top: 10px;
-}
-h4, .cardtext, .info{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-
+  }

@@ -1,54 +1,39 @@
 import "./AboutUs.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import img1 from '../img1.jpg';
-import img2 from '../img2.jpg';
-import lilogo from '../lilogo.png';
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import img1 from "../img1.jpg";
+import img2 from "../img2.jpg";
+import lilogo from "../lilogo.png";
+import Developer from "./developer/Developer";
 
 function AboutUs() {
-  return (
-    <div>
-      <header className="App-header">
-        <h1>About Us</h1>
-      </header>
-      <div className="row custom-row">
-        <div className="col-md-6 col-lg-6  col-sm-12">
-          <div className ="card shadow-sm p-3" style={{width:`20em`}} >
-            <div className="card-image">
-            <img src={img1} id="image1" className="img-fluid shadow-2-strong rounded" alt="j profilepicture" />
-            </div>
-            <div className="cardbody">
-              <h4>Kuldeep Akbari</h4>
-              <p className= "cardtext">Computer Science graduate student</p>
-              <p className="info">Specialize in .....</p>
-            </div>
-            <div className="footer">
-            <a className="icon"   href="https://en.wikipedia.org/wiki/Donald_Trump" className="card-link">
-              <img src={lilogo} id="imageli1" className="img-fluidrounded" alt="logo" /> 
-            </a>
+  const developers = [
+    {
+      img: img1,
+      name: "Kuldeep Akbari",
+      description1: "Pursuing MS in CS from PSU",
+      description2: "Talk is cheap, show me the code",
+      gitlink: "https://github.com/kuldeep-akbari",
+      gitlogo: lilogo,
+    },
+    {
+      img: img2,
+      name: "Shraddha Revar",
+      description1: "Pursuing MS in CS from PSU",
+      description2: "Happiness is when your code runs without error",
+      gitlink: "https://github.com/ShraddhaRevar",
+      gitlogo: lilogo,
+    },
+  ];
 
-            </div>
-          </div>
-        </div>
-    
-        <div className="col-md-6 col-lg-6  col-sm-12">
-          <div className ="card shadow-sm p-3" style={{width:`20em`}} >
-            <div className="card-image">
-            <img src={img2} id="image2" className="img-fluid shadow-2-strong rounded" alt="j profilepicture" />
-            </div>
-            <div className="cardbody">
-              <h4>Shraddha Revar</h4>
-              <p className= "cardtext">Computer Science graduate student</p>
-              <p className="info">Specialize in .....</p>
-            </div>
-            <div className="footer">
-            <a href="https://en.wikipedia.org/wiki/Bill_Clinton" className="card-link">
-              <img src={lilogo} id="imageli2" className="img-fluid rounded" alt="logo" /> 
-            </a>
-            </div>
-          </div>
-        </div>
+  return (
+    <div className="container">
+      <p className="card about-title">Developers of WeatherDash</p>
+      <div className="flex-container">
+        <>
+          {developers.map((tempDev) => {
+            return <Developer developer={tempDev}></Developer>;
+          })}
+        </>
       </div>
     </div>
   );

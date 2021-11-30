@@ -4,11 +4,12 @@ import { Line } from "react-chartjs-2";
 import "./Prediction.css";
 import { Chart } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
-import ChartSelector from "./chartselector/ChartSelector";
 
 function Prediction({ data }) {
+
   const time = data.hourly.time.map((time) => {
-    return time.replace("T", " ");
+      return time.replace("T", " ");
+
   });
 
   const temperature = data.hourly.temperature_2m;
@@ -26,7 +27,6 @@ function Prediction({ data }) {
 
   const [selected, setSelected] = useState("Temperature");
   const setMyChart = (chartName) => {
-    
     console.log("this is prediction : " + chartName);
 
     if (chartName == "Temperature") {
@@ -65,16 +65,16 @@ function Prediction({ data }) {
         data: soiltemperature,
       });
     }
-  }
+  };
 
   const chartDetails = {
     labels: chart.label,
     datasets: [
       {
-        label: "My First dataset",
+        label: chart.title,
         fill: false,
         lineTension: 0.1,
-        backgroundColor: "rgba(75,192,192,0.4)",
+        backgroundColor: "rgba(255,255,255,1)",
         borderColor: "rgba(75,192,192,1)",
         borderCapStyle: "butt",
         borderDash: [],
@@ -94,9 +94,37 @@ function Prediction({ data }) {
     ],
   };
 
-  function shoot(chartName) {
+  const options = {
+    scales: {
+      x: {
+          ticks: {
+              font: {
+                  size: 18,
+              }
+          }
+      },
+      y: {
+        ticks: {
+            font: {
+                size: 18,
+            }
+        }
+    }
+  },
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: 20,
+          },
+        },
+      },
+    },
+  };
+
+  function changeMyChart(chartName) {
     setSelected(chartName);
-    setMyChart( chartName);
+    setMyChart(chartName);
   }
 
   const titles = [
@@ -107,23 +135,26 @@ function Prediction({ data }) {
     "Soil temperature",
   ];
 
-
   return (
     <div>
       <div className="container">
         <p className="card prediction-title">7-days Weather Prediction</p>
         <div className="flex-container">
-         <>{
-  titles.map((tempTitle) => {
-    if (tempTitle == selected) {
-       return <p onClick={() => shoot(tempTitle)}><b>{tempTitle}</b></p>;
-    } else {
-      return  <p onClick={() => shoot(tempTitle)}>{tempTitle}</p>;
-    }
-  })
-}</>
+          <>
+            {titles.map((tempTitle) => {
+              if (tempTitle == selected) {
+                return (
+                  <p className="selected-chart"onClick={() => changeMyChart(tempTitle)}>
+                    <b>{tempTitle}</b>
+                  </p>
+                );
+              } else {
+                return <p className="normal-chart" onClick={() => changeMyChart(tempTitle)}>{tempTitle}</p>;
+              }
+            })}
+          </>
         </div>
-        <Line data={chartDetails} />
+        <Line className="chart" data={chartDetails} options={options} />
       </div>
     </div>
   );
