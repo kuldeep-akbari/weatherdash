@@ -7,6 +7,7 @@
     margin: 0.50em;
     padding: 0.25em;
     text-align: center;
+    box-shadow: 3px 3px 2px gray;
 }
 
 .flex-container {

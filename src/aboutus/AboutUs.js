@@ -28,15 +28,18 @@ function AboutUs() {
   ];
 
   return (
-    <div className="container">
-      <p className="card about-title">Developers of WeatherDash</p>
-      <div className="flex-container">
-        <>
-          {developers.map((tempDev) => {
-            return <Developer key={tempDev.id}
-            developer={tempDev}></Developer>;
-          })}
-        </>
+    <div className="gradient">
+      <div className="container ">
+        <p className="card about-title">Developers of WeatherDash</p>
+        <div className="flex-container">
+          <>
+            {developers.map((tempDev) => {
+              return (
+                <Developer key={tempDev.id} developer={tempDev}></Developer>
+              );
+            })}
+          </>
+        </div>
       </div>
     </div>
   );

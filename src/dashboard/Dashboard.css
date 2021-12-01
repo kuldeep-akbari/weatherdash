@@ -17,6 +17,7 @@
 .weather-details{
     background-color: white;
     padding: 1em;
+    box-shadow: 3px 3px 2px gray;
 }
 
 .text{
