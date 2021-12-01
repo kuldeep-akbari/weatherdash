@@ -10,7 +10,7 @@ import axios from "axios";
 
 function CreateApp() {
   const latitude = "45.52345";
-  const  longitude = "-122.67621";
+  const  longitude= "-122.67621";
 
   var url =
     "https://api.open-meteo.com/v1/forecast?latitude=" +

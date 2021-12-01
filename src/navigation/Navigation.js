@@ -10,7 +10,7 @@ function Navigation() {
     <div>
       <Navbar className="navbar" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/weatherdash">
             <Brand />
           </Navbar.Brand>
           <Navbar.Toggle className="navbar-dark" />
