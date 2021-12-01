@@ -1,19 +1,25 @@
-.tile{
-    background: white !important;
-    box-shadow: 3px 3px 2px black;
-    border-radius: 12px !important;
+.tile {
+  background: white !important;
+  box-shadow: 3px 3px 2px black;
+  border-radius: 12px !important;
+  margin: 1em;
 }
 
-.tile-image{
- height: 96px;
- width: 96px;
- margin: 24px 36px;
+.tile-image {
+  height: 128px;
+  width: 128px;
+  margin: 24px 48px;
 }
 
-.tile-title{
-
+.tile-title {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
 }
 
-.tile-value{
-
+.tile-value {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: x-large;
 }

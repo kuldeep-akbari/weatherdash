@@ -13,3 +13,27 @@
     justify-content: space-evenly;
     margin: 1.75em;
 }
+
+.weather-details{
+    background-color: white;
+    padding: 1em;
+}
+
+.text{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.city-name{
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+.temperature{
+    font-size: x-large;
+    margin-top: 0.5em;
+}
+
+.weather{
+    font-size: large;
+}

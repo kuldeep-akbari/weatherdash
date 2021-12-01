@@ -72,12 +72,16 @@ function Dashboard({ data }) {
     }
   }
 
-  const cityName = "Portland";
+  const cityName = "Portland, Oregon";
   const date = data.daily.time[0];
   const weather = getWeather(data.daily.weathercode[0]);
   const max_temp = data.daily.temperature_2m_max[0];
   const min_temp = data.daily.temperature_2m_min[0];
   const temp_unit = data.hourly_units.temperature_2m;
+  const soil_temp_unit = data.hourly_units.soil_temperature_0cm;
+  const windspeed_unit = data.hourly_units.windspeed_10m;
+  const precipitation_unit = data.hourly_units.precipitation;
+  const humidity_unit = data.hourly_units.relativehumidity_2m;
 
   const tempTime = data.hourly.time.map((time) => {
     // return time.replace("T", " ");
@@ -90,7 +94,7 @@ function Dashboard({ data }) {
   const tempPrecipitation = data.hourly.precipitation;
   const tempSoiltemperature = data.hourly.soil_temperature_0cm;
 
-  const time = data.hourly.temperature_2m.slice(0, 24);
+  const time = tempTime.slice(0, 24);
   const temperature = tempTemperature.slice(0, 24);
   const humidity = tempHumidity.slice(0, 24);
   const windspeed = tempWindspeed.slice(0, 24);
@@ -212,62 +216,63 @@ function Dashboard({ data }) {
     {
       id: 1,
       title: "Temperature",
-      value: temperature[0],
-      img:l_temperature
+      value: temperature[0] + temp_unit,
+      img: l_temperature,
     },
     {
       id: 2,
       title: "Humidity",
-      value: humidity[0],
-      img:l_humidity
+      value: humidity[0] + humidity_unit,
+      img: l_humidity,
     },
     {
       id: 3,
       title: "Windspeed",
-      value: windspeed[0],
-      img:l_wind
+      value: windspeed[0] + windspeed_unit,
+      img: l_wind,
     },
     {
       id: 4,
       title: "Precipitation",
-      value: precipitation[0],
-      img:l_precipitation
+      value: precipitation[0] + precipitation_unit,
+      img: l_precipitation,
     },
     {
       id: 5,
       title: "Soil temperature",
-      value: soiltemperature[0],
-      img:l_soil
-    }
+      value: soiltemperature[0] + soil_temp_unit,
+      img: l_soil,
+    },
   ];
 
   return (
     <div>
       <div className="container">
         <div className="dashboard-flex-container">
-          <div>
-            <p>{cityName}</p>
-            <p>{date}</p>
-            <p>{max_temp + temp_unit + " - " + min_temp + temp_unit}</p>
-            <p>{weather}</p>
-          </div>
-          <Line className="chart" data={chartDetails} options={options} />
-          <div className="dashboard-horizontal-flex-container">
-            <>
-              {titles.map((tempTile) => {
-                
-                return (
-                  <div onClick={() => changeMyChart(tempTile.title)}>
+          
+            <div className="card weather-details">
+              <p className="text city-name">{cityName}</p>
+              {/* <p className="text">{date}</p> */}
+              <p className="text temperature">{max_temp + temp_unit + " - " + min_temp + temp_unit}</p>
+              <p className="text weather">{weather}</p>
+            </div>
+          
+        </div>
+        <Line className="chart" data={chartDetails} options={options} />
+        <div className="dashboard-horizontal-flex-container">
+          <>
+            {titles.map((tempTile) => {
+              return (
+                <div onClick={() => changeMyChart(tempTile.title)}>
                   <WeatherTiles
                     key={tempTile.id}
                     className="weather-tile"
                     data={tempTile}
                   />
-                   </div>
-                );
-              })}
-            </>
-          </div>
+                </div>
+              );
+            })}
+          </>
         </div>
       </div>
     </div>
