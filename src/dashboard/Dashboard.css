@@ -18,6 +18,7 @@
     background-color: white;
     padding: 1em;
     box-shadow: 3px 3px 2px gray;
+    width: 100%;
 }
 
 .text{
@@ -37,4 +38,20 @@
 
 .weather{
     font-size: large;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    border: 1px solid rgba(0,0,0,.125);
+
+}
+
+.tile {
+    background: white !important;
+    box-shadow: 3px 3px 2px grey;
+    border-radius: 12px !important;
+    margin: 1em;
+    width: 200px;
 }
