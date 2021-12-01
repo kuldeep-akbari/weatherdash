@@ -30,7 +30,7 @@
     text-decoration: underline;
 }
 
-.temperature{
+.temperature, .title{
     font-size: x-large;
     margin-top: 0.5em;
 }

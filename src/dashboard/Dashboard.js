@@ -253,6 +253,7 @@ function Dashboard({ data }) {
             <div className="card weather-details">
               <p className="text city-name">{cityName}</p>
               {/* <p className="text">{date}</p> */}
+              <p className="text title">Record Highest- Record Lowest </p>
               <p className="text temperature">{max_temp + temp_unit + " - " + min_temp + temp_unit}</p>
               <p className="text weather">{weather}</p>
             </div>
