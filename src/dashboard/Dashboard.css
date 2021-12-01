@@ -1,7 +1,15 @@
-.flex-container {
+.dashboard-flex-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: start;
+    margin: 1.75em;
+}
+
+.dashboard-horizontal-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 1.75em;
 }

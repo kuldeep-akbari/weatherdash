@@ -1,0 +1,19 @@
+.tile{
+    background: white !important;
+    box-shadow: 3px 3px 2px black;
+    border-radius: 12px !important;
+}
+
+.tile-image{
+ height: 96px;
+ width: 96px;
+ margin: 24px 36px;
+}
+
+.tile-title{
+
+}
+
+.tile-value{
+
+}

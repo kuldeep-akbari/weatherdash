@@ -144,12 +144,12 @@ function Prediction({ data }) {
             {titles.map((tempTitle) => {
               if (tempTitle == selected) {
                 return (
-                  <p className="selected-chart"onClick={() => changeMyChart(tempTitle)}>
+                  <p key={tempTitle} className="selected-chart"onClick={() => changeMyChart(tempTitle)}>
                     <b>{tempTitle}</b>
                   </p>
                 );
               } else {
-                return <p className="normal-chart" onClick={() => changeMyChart(tempTitle)}>{tempTitle}</p>;
+                return <p key={tempTitle} className="normal-chart" onClick={() => changeMyChart(tempTitle)}>{tempTitle}</p>;
               }
             })}
           </>

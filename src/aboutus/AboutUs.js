@@ -8,6 +8,7 @@ import Developer from "./developer/Developer";
 function AboutUs() {
   const developers = [
     {
+      id: 1,
       img: img1,
       name: "Kuldeep Akbari",
       description1: "Pursuing MS in CS from PSU",
@@ -16,6 +17,7 @@ function AboutUs() {
       gitlogo: lilogo,
     },
     {
+      id: 2,
       img: img2,
       name: "Shraddha Revar",
       description1: "Pursuing MS in CS from PSU",
@@ -31,7 +33,8 @@ function AboutUs() {
       <div className="flex-container">
         <>
           {developers.map((tempDev) => {
-            return <Developer developer={tempDev}></Developer>;
+            return <Developer key={tempDev.id}
+            developer={tempDev}></Developer>;
           })}
         </>
       </div>
