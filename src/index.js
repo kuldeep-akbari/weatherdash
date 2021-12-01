@@ -27,7 +27,7 @@ function CreateApp() {
         <BrowserRouter>
           <Navigation />
           <Routes>
-            <Route exact path="/" element={<Dashboard data={res.data} />} />
+            <Route path="/weatherdash" element={<Dashboard data={res.data} />} />
             <Route
               path="/Prediction"
               element={<Prediction data={res.data} />}
