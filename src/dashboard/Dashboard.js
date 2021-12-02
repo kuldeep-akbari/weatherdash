@@ -11,6 +11,8 @@ import { Chart } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 import WeatherTiles from "./weathertiles/WeatherTiles";
 
+//API has different code for different weateher type, so assigning values to related weather type
+
 function Dashboard({ data }) {
   function getWeather(weathercode) {
     if (weathercode === 0) {
@@ -94,6 +96,8 @@ function Dashboard({ data }) {
   const tempPrecipitation = data.hourly.precipitation;
   const tempSoiltemperature = data.hourly.soil_temperature_0cm;
 
+  //Intitialization of an array that takes first 24 entries from the API
+
   const time = tempTime.slice(0, 24);
   const temperature = tempTemperature.slice(0, 24);
   const humidity = tempHumidity.slice(0, 24);
@@ -150,6 +154,8 @@ function Dashboard({ data }) {
     }
   };
 
+  //Chart details and configuration
+
   const chartDetails = {
     labels: chart.label,
     datasets: [
@@ -205,6 +211,8 @@ function Dashboard({ data }) {
     },
   };
 
+   //intitialization of function that is called when the chart stat is changed with Onclick
+
   function changeMyChart(chartName) {
     console.log("change my chart is called");
 
@@ -253,6 +261,7 @@ function Dashboard({ data }) {
             <div className="card weather-details">
               <p className="text city-name">{cityName}</p>
               {/* <p className="text">{date}</p> */}
+              <p className="text temp">Temperature: </p>
               <p className="text title">Record Highest- Record Lowest </p>
               <p className="text temperature">{max_temp + temp_unit + " - " + min_temp + temp_unit}</p>
               <p className="text weather">{weather}</p>

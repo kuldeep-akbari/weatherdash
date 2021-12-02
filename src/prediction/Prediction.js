@@ -12,6 +12,8 @@ function Prediction({ data }) {
 
   });
 
+  //Initialization of stat variables for hourly chart representation
+
   const temperature = data.hourly.temperature_2m;
   const humidity = data.hourly.relativehumidity_2m;
   const windspeed = data.hourly.windspeed_10m;
@@ -24,6 +26,8 @@ function Prediction({ data }) {
     label: time,
     data: temperature,
   });
+
+  //Function that will change representation according selection by user
 
   const [selected, setSelected] = useState("Temperature");
   const setMyChart = (chartName) => {
@@ -66,6 +70,8 @@ function Prediction({ data }) {
       });
     }
   };
+
+  //chart details and configuration
 
   const chartDetails = {
     labels: chart.label,

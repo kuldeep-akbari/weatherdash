@@ -31,7 +31,7 @@
     text-decoration: underline;
 }
 
-.temperature, .title{
+.temperature, .temp{
     font-size: x-large;
     margin-top: 0.5em;
 }
@@ -53,5 +53,5 @@
     box-shadow: 3px 3px 2px grey;
     border-radius: 12px !important;
     margin: 1em;
-    width: 200px;
+    width: 100%
 }
