@@ -121,3 +121,13 @@
   }
   
 
+<<<<<<< HEAD
+=======
+.tile {
+    background: white !important;
+    box-shadow: 3px 3px 2px grey;
+    border-radius: 12px !important;
+    margin: 1em;
+    width: 100%
+}
+>>>>>>> 9c948d13bd44b576dd81bcc4795561136cd2710c
