@@ -280,9 +280,11 @@ function Dashboard({ data }) {
           
         </div>
 
-        <div className="chartc">
+        <div className="chart-card">
+          <div className="chart-box">
             <Line data={chartDetails} options={options} />   
-         </div>
+            </div>
+        </div>
 
         <div className="container">
         <div className="dashboard-horizontal-flex-container">

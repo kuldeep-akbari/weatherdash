@@ -97,7 +97,7 @@
     }
 }
   
-@media screen and (max-width: 700px) and (min-width: 490px) {
+@media screen and (max-width: 700px) and (min-width: 480px) {
 
   .chartbox{
         width: 550px; 
@@ -139,13 +139,23 @@
         margin-left: 0%;
     } 
 
-  .selected-chart{
-     display: list-item;
-     width: 100%;  
- }
-  .normal-chart{
-     width: 100%;
- }
-  
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 990px) {
+
+    .chartbox{
+        width: 900px; 
+        height: 600px !important;
+    }
+  .chartcard{
+        display: flex;
+        width: 900px; 
+        height: 600px !important;
+        background-color: white;
+        position: relative;
+        align-self: flex-start;
+        margin-left: 0%;
+    } 
+
   }
 
