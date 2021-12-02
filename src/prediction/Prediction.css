@@ -46,16 +46,106 @@
     
   }
 
+  .bg{
+    
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .normal-chart{
     margin: 0;
     font-size: larger;
 }
 
-.linec{
-    height: 500px;
+.chartcard{
+    height: 500px !important;
     width: 1000px;
     margin-left: 150px;
     background-color: white;
+    position: relative;
 }
 
+.chartbox{
+    width: 1000px; 
+    height: 500px !important;
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .chartbox{
+        width: 360px; 
+        height: 300px !important;
+    }
+    .chartcard{
+        display: flex;
+        width: 360px; 
+        height: 300px !important;
+        margin-left: 0px;
+        background-color: white;
+        position: relative;
+        align-self: flex-start;
+    } 
+
+    .selected-chart{
+        display: list-item;
+        width: 100%;  
+    }
+    .normal-chart{
+        width: 100%;
+    }
+}
+  
+@media screen and (max-width: 700px) and (min-width: 490px) {
+
+  .chartbox{
+        width: 550px; 
+        height: 300px !important;
+    }
+  .chartcard{
+        display: flex;
+        width: 550px; 
+        height: 300px !important;
+        background-color: white;
+        position: relative;
+        align-self: flex-start;
+        margin-left: 0%;
+    } 
+
+ .selected-chart{
+     display: list-item;
+     width: 100%;  
+ }
+ .normal-chart{
+     width: 100%;
+ }
+    
+  }
+
+  @media screen and (max-width: 990px) and (min-width: 700px) {
+
+  .chartbox{
+        width: 700px; 
+        height: 300px !important;
+    }
+  .chartcard{
+        display: flex;
+        width: 700px; 
+        height: 300px !important;
+        background-color: white;
+        position: relative;
+        align-self: flex-start;
+        margin-left: 0%;
+    } 
+
+  .selected-chart{
+     display: list-item;
+     width: 100%;  
+ }
+  .normal-chart{
+     width: 100%;
+ }
+  
+  }
 

@@ -168,9 +168,14 @@ function Prediction({ data }) {
             })}
           </>
         </div>
-        <div className="linec">
-        <Line className="chart" data={chartDetails} options={options} />
-        </div>
+        
+        <div className="chartcard">
+          <div className="chartbox">
+                  <Line className="chart" data={chartDetails} options={options} />
+          </div>
+        </div> 
+         
+        
         
       </div>
     </div>

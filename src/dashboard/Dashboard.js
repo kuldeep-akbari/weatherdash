@@ -11,9 +11,6 @@ import WeatherTiles from "./weathertiles/WeatherTiles";
 import backg from "../bg.jpg";
 
 
-
-//API has different code for different weateher type, so assigning values to related weather type
-
 //API has different code for different weateher type, so assigning values to related weather type
 
 function Dashboard({ data }) {
@@ -284,8 +281,8 @@ function Dashboard({ data }) {
         </div>
 
         <div className="chartc">
-        <Line className="chart col-lg-8 col-md-7 col-sm-12" data={chartDetails} options={options} />
-        </div>
+            <Line data={chartDetails} options={options} />   
+         </div>
 
         <div className="container">
         <div className="dashboard-horizontal-flex-container">
