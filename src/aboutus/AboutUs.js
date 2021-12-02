@@ -4,6 +4,7 @@ import img1 from "../img1.jpg";
 import img2 from "../img2.jpg";
 import lilogo from "../lilogo.png";
 import Developer from "./developer/Developer";
+import backg from "../bg.jpg";  
 
 function AboutUs() {
   const developers = [
@@ -28,6 +29,8 @@ function AboutUs() {
   ];
 
   return (
+
+    <div class="bg" style={{ backgroundImage:`url(${backg})`}}>
     <div className="gradient">
       <div className="container ">
         <p className="card about-title">Developers of WeatherDash</p>
@@ -41,6 +44,7 @@ function AboutUs() {
           </>
         </div>
       </div>
+    </div>
     </div>
   );
 }

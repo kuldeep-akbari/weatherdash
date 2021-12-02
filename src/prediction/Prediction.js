@@ -4,6 +4,8 @@ import { Line } from "react-chartjs-2";
 import "./Prediction.css";
 import { Chart } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
+import backg from "../bg.jpg";
+
 
 function Prediction({ data }) {
 
@@ -95,6 +97,8 @@ function Prediction({ data }) {
   };
 
   const options = {
+
+    maintainAspectRatio:false,
     scales: {
       x: {
           ticks: {
@@ -120,12 +124,14 @@ function Prediction({ data }) {
         },
       },
     },
+
   };
 
   function changeMyChart(chartName) {
     setSelected(chartName);
     setMyChart(chartName);
   }
+
 
   const titles = [
     "Temperature",
@@ -136,6 +142,8 @@ function Prediction({ data }) {
   ];
 
   return (
+
+    <div class="bg" style={{ backgroundImage:`url(${backg})`}}>
     <div>
       <div className="container">
         <p className="card prediction-title">7-days Weather Prediction</p>
@@ -154,8 +162,12 @@ function Prediction({ data }) {
             })}
           </>
         </div>
+        <div className="linec">
         <Line className="chart" data={chartDetails} options={options} />
+        </div>
+        
       </div>
+    </div>
     </div>
   );
 }

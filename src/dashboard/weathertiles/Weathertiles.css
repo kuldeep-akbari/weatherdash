@@ -3,23 +3,63 @@
   box-shadow: 3px 3px 2px gray;
   border-radius: 12px !important;
   margin: 1em;
+  width: 170px;
+  height: 200;
 }
 
 .tile-image {
-  height: 128px;
-  width: 128px;
+  height: 50px;
+  width: 60px;
   margin: 24px 48px;
 }
 
 .tile-title {
   margin-bottom: 0;
   text-align: center;
-  font-size: x-large;
+  font-size:large;
   font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .tile-value {
   margin-bottom: 1em;
   text-align: center;
   font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tile:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  z-index: 100;
+  transition: 300ms;
+}
+
+@media screen and (max-width: 480px) {
+
+  .tile{
+    position: relative;
+  }
+
+  
+}
+
+@media screen and (max-width: 700px) and (min-width: 490px) {
+
+  .tile{
+    position: relative;
+  }
+
+  
+}
+  
+
+@media screen and (max-width: 800px) and (min-width: 700px) {
+
+  .tile{
+    position:sticky;
+    
+  }
+
+  
 }

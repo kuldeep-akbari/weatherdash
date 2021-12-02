@@ -7,9 +7,12 @@ import l_soil from "../soil.png";
 import l_precipitation from "../precipitation.png";
 import l_humidity from "../humidity.png";
 import { Line } from "react-chartjs-2";
-import { Chart } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
 import WeatherTiles from "./weathertiles/WeatherTiles";
+import backg from "../bg.jpg";
+
+
+
+//API has different code for different weateher type, so assigning values to related weather type
 
 function Dashboard({ data }) {
   function getWeather(weathercode) {
@@ -94,12 +97,16 @@ function Dashboard({ data }) {
   const tempPrecipitation = data.hourly.precipitation;
   const tempSoiltemperature = data.hourly.soil_temperature_0cm;
 
+  //Intitialization of an array that takes first 24 entries from the API
+
   const time = tempTime.slice(0, 24);
   const temperature = tempTemperature.slice(0, 24);
   const humidity = tempHumidity.slice(0, 24);
   const windspeed = tempWindspeed.slice(0, 24);
   const precipitation = tempPrecipitation.slice(0, 24);
   const soiltemperature = tempSoiltemperature.slice(0, 24);
+
+//useState function that changes with chart values
 
   const [chart, setChart] = useState({
     id: 1,
@@ -150,6 +157,8 @@ function Dashboard({ data }) {
     }
   };
 
+  //Chart details and configuration
+
   const chartDetails = {
     labels: chart.label,
     datasets: [
@@ -178,6 +187,9 @@ function Dashboard({ data }) {
   };
 
   const options = {
+    
+    maintainAspectRatio:false,
+    responsive: true,
     scales: {
       x: {
         ticks: {
@@ -203,7 +215,11 @@ function Dashboard({ data }) {
         },
       },
     },
+    
+    
   };
+
+  //intitialization of function that is called when the chart is changed
 
   function changeMyChart(chartName) {
     console.log("change my chart is called");
@@ -211,6 +227,8 @@ function Dashboard({ data }) {
     setSelected(chartName);
     setMyChart(chartName);
   }
+
+  //initialization of weather variables
 
   const titles = [
     {
@@ -246,20 +264,28 @@ function Dashboard({ data }) {
   ];
 
   return (
+
+    <div class="bg" style={{ backgroundImage:`url(${backg})`}}>
     <div>
-      <div className="container">
+      
         <div className="dashboard-flex-container">
           
             <div className="card weather-details">
               <p className="text city-name">{cityName}</p>
               {/* <p className="text">{date}</p> */}
+              <p className="text temp">Temperature: </p>
               <p className="text title">Record Highest- Record Lowest </p>
               <p className="text temperature">{max_temp + temp_unit + " - " + min_temp + temp_unit}</p>
               <p className="text weather">{weather}</p>
             </div>
           
         </div>
-        <Line className="chart" data={chartDetails} options={options} />
+
+        <div className="chartc">
+        <Line className="chart col-lg-8 col-md-7 col-sm-12" data={chartDetails} options={options} />
+        </div>
+
+        <div className="container">
         <div className="dashboard-horizontal-flex-container">
           <>
             {titles.map((tempTile) => {
@@ -276,6 +302,7 @@ function Dashboard({ data }) {
           </>
         </div>
       </div>
+    </div>
     </div>
   );
 }

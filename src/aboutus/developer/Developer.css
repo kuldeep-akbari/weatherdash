@@ -20,6 +20,7 @@
     font-size: large;
     text-align: center;
     margin: 0em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .container2{
@@ -32,3 +33,10 @@
     height: 3em;
     width: 3em;
 }
+
+.git-icon:hover{
+    transform: scale(1.15);
+    z-index: 100;
+    transition: 300ms;
+}
+
