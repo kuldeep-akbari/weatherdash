@@ -221,11 +221,7 @@ function Dashboard({ data }) {
     
   };
 
-<<<<<<< HEAD
-  //intitialization of function that is called when the chart is changed
-=======
    //intitialization of function that is called when the chart stat is changed with Onclick
->>>>>>> 9c948d13bd44b576dd81bcc4795561136cd2710c
 
   function changeMyChart(chartName) {
     console.log("change my chart is called");

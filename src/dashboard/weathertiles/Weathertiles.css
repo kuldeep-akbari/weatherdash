@@ -35,31 +35,3 @@
   transition: 300ms;
 }
 
-@media screen and (max-width: 480px) {
-
-  .tile{
-    position: relative;
-  }
-
-  
-}
-
-@media screen and (max-width: 700px) and (min-width: 490px) {
-
-  .tile{
-    position: relative;
-  }
-
-  
-}
-  
-
-@media screen and (max-width: 800px) and (min-width: 700px) {
-
-  .tile{
-    position:sticky;
-    
-  }
-
-  
-}
