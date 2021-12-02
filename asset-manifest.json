@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weatherdash/static/css/main.dae2a168.chunk.css",
+    "main.css": "/weatherdash/static/css/main.9ad526ca.chunk.css",
     "main.js": "/weatherdash/static/js/main.3aee033e.chunk.js",
     "main.js.map": "/weatherdash/static/js/main.3aee033e.chunk.js.map",
     "runtime-main.js": "/weatherdash/static/js/runtime-main.83fdd098.js",
@@ -10,7 +10,7 @@
     "static/js/2.f9dc4b65.chunk.js.map": "/weatherdash/static/js/2.f9dc4b65.chunk.js.map",
     "index.html": "/weatherdash/index.html",
     "static/css/2.383c0125.chunk.css.map": "/weatherdash/static/css/2.383c0125.chunk.css.map",
-    "static/css/main.dae2a168.chunk.css.map": "/weatherdash/static/css/main.dae2a168.chunk.css.map",
+    "static/css/main.9ad526ca.chunk.css.map": "/weatherdash/static/css/main.9ad526ca.chunk.css.map",
     "static/js/2.f9dc4b65.chunk.js.LICENSE.txt": "/weatherdash/static/js/2.f9dc4b65.chunk.js.LICENSE.txt",
     "static/media/img1.22dcf628.jpg": "/weatherdash/static/media/img1.22dcf628.jpg",
     "static/media/img2.b77bbbf9.jpg": "/weatherdash/static/media/img2.b77bbbf9.jpg",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.83fdd098.js",
     "static/css/2.383c0125.chunk.css",
     "static/js/2.f9dc4b65.chunk.js",
-    "static/css/main.dae2a168.chunk.css",
+    "static/css/main.9ad526ca.chunk.css",
     "static/js/main.3aee033e.chunk.js"
   ]
 }
